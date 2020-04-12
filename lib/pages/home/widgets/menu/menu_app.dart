@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_tutorial/pages/home/widgets/item_menu.dart';
+import 'package:nubank_tutorial/pages/home/widgets/menu/item_menu.dart';
 
 class MenuApp extends StatelessWidget {
   final double top;
@@ -20,7 +20,7 @@ class MenuApp extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.55,
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
-                      child: Column(
+            child: Column(
               children: <Widget>[
                 Image.network(
                   'https://webmobtuts.com/wp-content/uploads/2019/02/QR_code_for_mobile_English_Wikipedia.svg_.png',
@@ -101,7 +101,7 @@ class MenuApp extends StatelessWidget {
                         height: 25,
                       ),
                       Container(
-                        height: 35,
+                        height: 40,
                         width: double.infinity,
                         decoration: BoxDecoration(
                             border:
@@ -117,7 +117,8 @@ class MenuApp extends StatelessWidget {
                           splashColor: Colors.purple[900],
                           child: Text(
                             'SAIR DO APP',
-                            style: TextStyle(fontSize: 10),
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.bold),
                           ),
                           onPressed: () {},
                         ),

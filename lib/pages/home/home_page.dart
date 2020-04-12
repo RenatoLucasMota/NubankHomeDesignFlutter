@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_tutorial/pages/home/widgets/bottom_menu.dart';
-import 'package:nubank_tutorial/pages/home/widgets/item_menu_bottom.dart';
-import 'package:nubank_tutorial/pages/home/widgets/menu_app.dart';
+import 'package:nubank_tutorial/pages/home/widgets/bottom_menu/bottom_menu.dart';
+import 'package:nubank_tutorial/pages/home/widgets/menu/menu_app.dart';
 import 'package:nubank_tutorial/pages/home/widgets/my_app_bar.dart';
-import 'package:nubank_tutorial/pages/home/widgets/my_dots_app.dart';
-import 'package:nubank_tutorial/pages/home/widgets/page_view_app.dart';
+import 'package:nubank_tutorial/pages/home/widgets/page_view/my_dots_app.dart';
+import 'package:nubank_tutorial/pages/home/widgets/page_view/page_view_app.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -32,6 +31,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       backgroundColor: Colors.purple[800],
+      extendBody: true,
       body: Stack(
         alignment: Alignment.topCenter,
         children: <Widget>[
@@ -51,6 +51,11 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomMenu(
             showMenu: _showMenu,
+          ),
+          MyDotsApp(
+            showMenu: _showMenu,
+            top: _screenHeigth * .70,
+            currentIndex: _currentIndex,
           ),
           PageViewApp(
             showMenu: _showMenu,
@@ -96,11 +101,6 @@ class _HomePageState extends State<HomePage> {
                 }
               });
             },
-          ),
-          MyDotsApp(
-            showMenu: _showMenu,
-            top: _screenHeigth * .70,
-            currentIndex: _currentIndex,
           ),
         ],
       ),

@@ -24,9 +24,9 @@ class MyAppBar extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Image.network(
-                      'https://logodownload.org/wp-content/uploads/2019/08/nubank-logo-3.png',
-                      height: 35,
+                    Image.asset(
+                      'assets/images/nubank-logo.png',
+                      height: 30,
                       color: Colors.white,
                     ),
                     SizedBox(
